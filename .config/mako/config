@@ -1,0 +1,18 @@
+# Colors
+font=jetbrains mono 13
+width= 250
+height=120
+icons=1
+padding=20
+border-size=3
+border-radius=3
+default-timeout=4000
+layer=overlay
+
+background-color=#1E1D2F
+text-color=#D9E0EE
+border-color=#96CDFB
+progress-color=over #302D41
+
+[urgency=high]
+border-color=#F8BD96

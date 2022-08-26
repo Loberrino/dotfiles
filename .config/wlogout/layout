@@ -1,0 +1,36 @@
+{
+    "label" : "lock",
+    "action" : "swaylock",
+    "text" : "Lock",
+    "keybind" : "l"
+}
+{
+    "label" : "logout",
+    "action" : "swaymsg exit",
+    "text" : "Exit to TTY",
+    "keybind" : "e"
+}
+{
+    "label" : "reboot",
+    "action" : "loginctl reboot",
+    "text" : "Reboot",
+    "keybind" : "r"
+}
+{
+    "label" : "suspend",
+    "action" : "loginctl suspend",
+    "text" : "Suspend",
+    "keybind" : "u"
+}
+{
+    "label" : "shutdown",
+    "action" : "loginctl poweroff",
+    "text" : "Shutdown",
+    "keybind" : "s"
+}
+{
+    "label" : "hibernate",
+    "action" : "loginctl suspend-then-hibernate",
+    "text" : "Hibernate",
+    "keybind" : "h"
+}

@@ -1,0 +1,84 @@
+- name: Basic System Keybinds
+  prefix: Mod
+  keybinds:
+    - name: Reload Config
+      key: Shift + C
+    - name: Kill focused window
+      key: Q
+    - name: Launch keybinds guide (You're already here!)
+      key: D
+    - name: Launches the terminal (Kitty)
+      key: Return
+    - name: Launches the app launcher (Wofi) in drun mode
+      key: Space
+    - name: Launches the app launcher (Wofi) in run/dmenu-style mode
+      key: Ctrl + Space
+    - name: Launches GUI Bluetooth Manager
+      key: Ctrl + B
+    - name: Launches GUI Audio Manager
+      key: Ctrl + V
+    - name: Launches GUI Network Manager
+      key: Ctrl + W
+- name: Window Management
+  prefix: Mod
+  keybinds:
+    - name: Move focus around visible windows
+      key: H/J/K/L
+    - name: Moves currently focused window around
+      key: Shift + H/J/K/L
+    - name: Moves to the corresponding Workspace
+      key: Number key
+    - name: Moves focused window to corresponding Workspace
+      key: Shift + Number key
+    - name: Horizontally split current focused window
+      key: B
+    - name: Vertically split current focused window
+      key: V
+    - name: Enter current focused window into fullscreen mode
+      key: F
+    - name: Toggle current focused window between tiling and floating
+      key: Shift + Space
+    - name: Swap focus between Tiling and Floating windows
+      key: Alt + Space
+    - name: Enter window resize mode
+      key: R
+    - name: Toggle sticky mode on current focused window
+      key: comma
+    - name: Move current focused window into Scratchpad
+      key: Minus
+    - name: Cycle through windows inside Scratchpad
+      key: Equal
+- name: Screen Capture
+  prefix: Mod
+  keybinds:
+    - name: Takes fullscreen screenshot and puts it into clipboard
+      key: Shift + Return
+    - name: Selects portion of screen to screenshot then puts in clipboard
+      key: Shift + S
+    - name: Takes fullscreen screenshot and saves it in ~/Pictures
+      key: Alt + Return
+    - name: Selects portion of screen to screenshot and saves it in ~/Pictures
+      key: Alt + S
+    - name: Select a pixel and colour contents get copied into clipboard
+      key: C
+    - name: Selects portion of screen to record and saves it in ~/Videos
+      key: Shift + Print
+    - name: Starts recording the entire screen and saves it in ~/Videos
+      key: Print
+    - name: Ends all screen recording processes
+      key: Ctrl + Print
+- name: Custom Bindings
+  prefix: Mod
+  keybinds:
+    - name: Launch web browser (LibreWolf)
+      key: W
+    - name: Launch TOR browser
+      key: T
+    - name: Launch GUI Calculator (Qalculate)
+      key: Keypad Plus
+    - name: Launch Character Selector
+      key: Grave
+    - name: Reload Waybar Config
+      key: Shift + W
+    - name: FreeTube
+      key: Y

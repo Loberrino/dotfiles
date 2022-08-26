@@ -1,0 +1,51 @@
+*{
+    font-family: "JetBrains Mono";
+}
+
+window {
+    border-radius: 15px 15px 15px 15px;
+}
+
+#input {
+    margin: 5px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 0px solid black;
+    background-color: #1A1826;
+    color: white;
+}
+
+#inner-box {
+    margin: 5px;
+    background-color: #161320;
+}
+
+#outer-box {
+    margin: 5px;
+    padding:20px;
+    background-color: #161320;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#scroll {
+    
+}
+
+#text {
+    margin: 5px;
+    color: #ABE9B3;
+    /* border: 2px solid cyan; */
+    /* background-color: cyan; */
+}
+
+/* #entry:nth-child(even){
+    background-color: #404552;
+} */
+
+#entry:selected {
+    background-color: #1A1826;
+}
+
+#text:selected {
+    text-decoration-color: white;
+}

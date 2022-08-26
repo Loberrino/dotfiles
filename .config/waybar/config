@@ -1,0 +1,107 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top",
+    "modules-left": ["sway/workspaces", "custom/scratchpad", "tray"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "backlight", "battery", "clock"],
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{icon}",
+	 	"persistent_workspaces": {
+	 		"1": [],
+	 		"2": [],
+	 		"3": [],
+	 		"4": [],
+	 		"5": [],
+	 		"6": [],
+	 		"7": [],
+	 		"8": [],
+	 		"9": [],
+	 		"10": []
+	},
+        "format-icons": {
+            "default": "𖫩",
+            "urgent": "⁕",
+            "focused": "𑀣",
+         }
+     },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%a-%m-%d/%H:%M}",
+    },
+    "cpu": {
+        "format": " {usage}%"
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "backlight": {
+        //"device": "intel_backlight",
+        "format": "　{percent}%",
+    },
+    "battery": {
+        "states": { 
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}% | {time}",
+        "format-charging": " {capacity}% | {time}",
+        "format-plugged": " {capacity}% | {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 90,
+        // "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "network": {
+        // "interface": "wlp1s0*", // (Optional) To force the use of this interface
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ipaddr}/{cidr}",
+	"tooltip-format": "{ifname}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/scratchpad": {
+    "interval": 3,
+    "return-type": "json",
+    "exec": "swaymsg -t get_tree | jq --unbuffered --compact-output '(select(.name == \"root\") | .nodes[] | select(.name == \"__i3\") | .nodes[] | select(.name == \"__i3_scratch\") | .focus) as $scratch_ids | [.. | (.nodes? + .floating_nodes?) // empty | .[] | select(.id|IN($scratch_ids[]))] as $scratch_nodes | { text: \"\\($scratch_nodes|length)\", tooltip: $scratch_nodes|map(.name)|join(\"\\n\") }'",
+    "format": "{} ",
+    "on-click": "swaymsg 'scratchpad show'",
+    "on-click-right": "swaymsg 'move scratchpad'"
+    }
+}
