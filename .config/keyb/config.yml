@@ -1,5 +1,5 @@
 settings:
-  keyb_path: /home/arad/.config/keyb/keyb.yml
+  keyb_path: /home/user/.config/keyb/keyb.yml
   debug: false
   reverse: false
   mouse: true

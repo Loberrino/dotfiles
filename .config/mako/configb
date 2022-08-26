@@ -1,6 +1,0 @@
-on-button-left=invoke-default-action
-on-button-right=dismiss
-font=Jetbrains Mono 13px
-icon-path=/usr/share/icons/Tela-dark
-icon-location=left
-default-timeout=300
