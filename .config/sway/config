@@ -30,10 +30,10 @@ exec nm-applet --indicator
 # Start the Blueman (Bluetooth manager) applet for Waybar
 exec blueman-applet
 
-# Start the autotiler
+# Start the autotiler script; this basically makes Sway a dynamic WM unless a direction for a window to open in is specified
 exec_always autotiling
 
-### Key sets
+### Sets
 set {
     $mod Mod4
     $alt Mod1
@@ -136,7 +136,7 @@ bindsym {
 # Touchpad Killer Button
 bindsym XF86TouchpadToggle input 1267:12548:ELAN1300:00_04F3:3104_Touchpad events toggle enabled disabled
 
-# Shortcut for viewing this config file
+# View the keybindings
 bindsym $mod+d exec kitty -e keyb
 
 # Config Audio Menu
@@ -295,6 +295,7 @@ bindsym $mod+Shift+W exec killall -SIGUSR2 waybar
 
 for_window [app_id="librewolf" title="^Picture-in-Picture$"] \
     floating enable, move position 877 450, sticky enable
+
 for_window [shell=xwayland title="Picture in picture"] \
 	floating enable, sticky enable
 
