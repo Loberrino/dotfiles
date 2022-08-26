@@ -41,7 +41,7 @@ nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
 " Vim-Plug setup; all required Plugins must be declared between the begin and
 " end lines using the syntax: Plug '<pluginname>'
-call plug#begin('/home/arad/.local/share/nvim/plugged')
+call plug#begin('/home/user/.local/share/nvim/plugged')
 Plug 'mhinz/vim-startify'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
@@ -97,7 +97,7 @@ let g:lightline = {
 set noshowmode
 
 " CoC configuration:
-let g:coc_config_home = '/home/arad/.config/nvim/'
+let g:coc_config_home = '/home/user/.config/nvim/'
 
 " OmniSharp and ALE config
 let g:OmniSharp_server_use_net6 = 1
